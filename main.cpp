@@ -1,4 +1,4 @@
-// main.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã
+// main.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹
 #include <iostream>
 #include <stdlib.h>
 #include <fstream>
@@ -24,11 +24,11 @@ void GDALPointSelect(BSTR inName, double thresholdVal, BSTR outName)
 	CComBase comBase;
 	int imgWidth = 0, imgHeight = 0;
 
-	cout << "ÒÑ¾­½øÈëPointSelect,¼´½«´ò¿ªDEMÓ°Ïñ£¡" << endl;
+	cout << "å·²ç»è¿›å…¥PointSelect,å³å°†æ‰“å¼€DEMå½±åƒï¼" << endl;
 
 	if (!comBase.OpenImg(inName, imgWidth, imgHeight))
 		return;
-	cout << "µÚÒ»´Î´ò¿ªDEMÍê³É£¡" << endl;
+	cout << "ç¬¬ä¸€æ¬¡æ‰“å¼€DEMå®Œæˆï¼" << endl;
 
 	float *pBufferIn = new float[imgWidth*imgHeight];
 	double dx = 0, dy = 0, Xmin = 0, Ymax = 0;
@@ -36,23 +36,23 @@ void GDALPointSelect(BSTR inName, double thresholdVal, BSTR outName)
 	if (!comBase.OpenImg(inName, imgWidth, imgHeight, dx, dy, Xmin, Ymax, prjRef, pBufferIn))
 		return;
 
-	cout << "µÚ¶ş´Î´ò¿ªDEMÍê³É£¡" << endl;
+	cout << "ç¬¬äºŒæ¬¡æ‰“å¼€DEMå®Œæˆï¼" << endl;
 
-	//´´½¨Ò»¸öĞÂµÄÊä³öÌØÕ÷µãµÄDEMÓ°Ïñ
+	//åˆ›å»ºä¸€ä¸ªæ–°çš„è¾“å‡ºç‰¹å¾ç‚¹çš„DEMå½±åƒ
 	float *DEMPtSel = new float[imgWidth*imgHeight];
 	memset(DEMPtSel, 0, imgWidth*imgHeight*sizeof(float));
 
-	//ÉèÖÃ¼ÆËãÅÅÁĞË³ĞòµÄindexÊıÖµĞÅÏ¢
+	//è®¾ç½®è®¡ç®—æ’åˆ—é¡ºåºçš„indexæ•°å€¼ä¿¡æ¯
 	float *DEMPtIdx = NULL;
 	DEMPtIdx = new float[imgWidth*imgHeight];
 	memset(DEMPtIdx, 0, imgWidth*imgHeight*sizeof(float));
 
-	cout << "¼´½«½øÈëDEMÌØÕ÷µãµÄÌáÈ¡º¯Êı£¡" << endl;
+	cout << "å³å°†è¿›å…¥DEMç‰¹å¾ç‚¹çš„æå–å‡½æ•°ï¼" << endl;
 
-	//Ò»´ÎÔö¼ÓÃ¿¸öÈı½ÇĞÎÖĞ¾ßÓĞ×î´ó¸ß³Ì²îÖµµÄµã£¨Ç°ÌáÊÇÃ¿¸öÈı½ÇĞÎÖĞµÄ×î´ó¸ß³Ì²îÖµ´óÓÚãĞÖµ£¬ÔòÌí¼Óµ½µØĞÎÌØÕ÷µã¼¯ºÏÖĞ£©
+	//ä¸€æ¬¡å¢åŠ æ¯ä¸ªä¸‰è§’å½¢ä¸­å…·æœ‰æœ€å¤§é«˜ç¨‹å·®å€¼çš„ç‚¹ï¼ˆå‰ææ˜¯æ¯ä¸ªä¸‰è§’å½¢ä¸­çš„æœ€å¤§é«˜ç¨‹å·®å€¼å¤§äºé˜ˆå€¼ï¼Œåˆ™æ·»åŠ åˆ°åœ°å½¢ç‰¹å¾ç‚¹é›†åˆä¸­ï¼‰
 	ztolerancePointSelect(pBufferIn, imgWidth, imgHeight, Xmin, Ymax, dx, dy, thresholdVal, DEMPtSel, DEMPtIdx);
 
-	cout << "¼´½«createNewImg!" << endl;
+	cout << "å³å°†createNewImg!" << endl;
 	for (int i = 0; i < 10; i++)
 	{
 		cout << DEMPtSel[i] << endl;
@@ -82,11 +82,11 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 	GDALAllRegister();
 	clock_t begin, end;
 	double time;
-	cout << "¿ªÊ¼ÌáÈ¡ÌØÕ÷µã£º" << endl;
-	BSTR inName = L"D:\\workstation\\DEM_5958_3514.img";
-	BSTR outName = L"D:\\workstation\\DEM_5958_3514__parallel_48.img";
+	cout << "å¼€å§‹æå–ç‰¹å¾ç‚¹ï¼š" << endl;
+	BSTR inName = L"D:\\workstation\\DEM_2980_3515.img";
+	BSTR outName = L"D:\\workstation\\DEM_2980_3515_cp.img";
 	ofstream timeTxt;
-	timeTxt.open("D:\\DEM_5958_3514_48.txt");
+	timeTxt.open("D:\\DEM_2980_3515_48.txt");
 	begin = clock();
 	GDALPointSelect(inName, 48, outName);
 	end = clock();
