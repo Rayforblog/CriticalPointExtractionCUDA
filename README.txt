@@ -4,6 +4,9 @@ Project for extracting the critical point programming
 # Run-time environment
 Visual studio 2013 and CUDA8.0 are installed successively on the Microsoft Windows of the 64-bit
 
+#test data
+DEM_2980_3515.img
+
 #detail procedure of the parallel project
 1)Create a new CUDA program
 2)Download all of the files except the ReadMe.txt from the website (https://github.com/parallelProject/CriticalPointExtraction)
