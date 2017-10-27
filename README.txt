@@ -9,7 +9,8 @@ DEM_2980_3515.img
 
 #detail procedure of the parallel project
 1)Create a new CUDA program
-2)Download all of the files except the ReadMe.txt from the website (https://github.com/parallelProject/CriticalPointExtraction)
+2)Download all of the files except the ReadMe.txt from the website 
+  (https://github.com/parallelProject/CriticalPointExtraction)
   (Tip: the gdal.lib in the "lib" folder of the "include" folder is larger than 50M, it is maybe 
   wrong in the downloaded CriticalPointExtraction-master.Zip. If it is wrong, download in seperate
   and replace the library file in the "lib" folder.)
