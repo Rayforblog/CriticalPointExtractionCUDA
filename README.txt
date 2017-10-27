@@ -28,8 +28,8 @@ DEM_2980_3515.img
    c)Add the file directory of the include in the installation directory of CUDA8.0 (like...\NVIDIA GPU 
      Computing Toolkit\CUDA\v8.0\include) and the file directory of the “lib”  in the “include” folder
      (like ...\include\lib) into the “Library Directories”
-   c)Click the “C/C++”->Code Generation, set Runtime Library as Multi-threaded DLL(/MD) 
-   d)Click the “Linker”->Input,add gdal_i.lib, TinDLL.lib and gdal.lib into "Additional Dependencies"
+   d)Click the “C/C++”->Code Generation, set Runtime Library as Multi-threaded DLL(/MD) 
+   e)Click the “Linker”->Input,add gdal_i.lib, TinDLL.lib and gdal.lib into "Additional Dependencies"
 6)Compile the program and prompt success
 7)Download the test data from the above website, set the file directory of inName and outNamein the 
   main.cpp and the pre-defined thresholdVal
