@@ -8,7 +8,7 @@ Visual studio 2013 and CUDA8.0 are installed successively on the Microsoft Windo
 DEM_2980_3515.img
 
 #detail procedure of the parallel project
-1)Create a new CUDA program
+1)Create a new CUDA program and delete the kernel.cu
 2)Download all of the files except the ReadMe.txt from the website 
   (https://github.com/parallelProject/CriticalPointExtraction)
   (Tip: the gdal.lib in the "lib" folder of the "include" folder is larger than 50M, it is maybe 
