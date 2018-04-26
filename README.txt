@@ -2,19 +2,18 @@
 Project for extracting the critical point programming
 
 # Run-time environment
-Visual studio 2013 and CUDA8.0 are installed successively on the Microsoft Windows of the 64-bit
+Visual Studio and CUDA8.0 are installed on a computer with the NVDIA graphics card which the compute capability is 2.1 or above
 
 #test data
 DEM_2980_3515.img
 
 #detail procedure of the parallel project
-1)Create a new CUDA program and delete the kernel.cu
-2)Download all of the files except the ReadMe.txt from the website 
+1)Download all of the files except the ReadMe.txt from the website 
   (https://github.com/parallelProject/CriticalPointExtraction)
   (Tip: the gdal.lib in the "lib" folder of the "include" folder is larger than 50M, it is maybe 
   wrong in the downloaded CriticalPointExtraction-master.Zip. If it is wrong, download in seperate
   and replace the library file in the "lib" folder.)
-3)Copy these files to the file directory of the project
+2)Copy these files to the file directory of the project
 4)Add the four files(ComBase.cpp, ComBase.h, kernel.cu and main.cpp) into the project
 5)Configure the path of the library file and properties, Click the Project->Properties
   ->Configuration properties and do this:
