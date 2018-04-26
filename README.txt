@@ -9,9 +9,7 @@ DEM_2980_3515.img
 
 #detail procedure of the parallel project
 
-1)Downloading all of the files except the ReadMe.txt from the website 
-  (https://github.com/parallelProject/CriticalPointExtraction)
-  (Tip: the gdal.lib file in the "lib" folder of the "include" folder is larger than 50M, it must be downloaded in seperate and replace the gdal.lib file in the *.ZIP file.)
+1)Downloading all of the files except the ReadMe.txt from the website (https://github.com/parallelProject/CriticalPointExtraction)(Tip:the gdal.lib file in the "lib" folder of the "include" folder is larger than 50M, it must be downloaded in seperate and replace the gdal.lib file in the *.ZIP file.)
  
 2)Setting the file directory of the variables "inName" and "outNamein" the main.cpp and the pre-defined threshold value
   
