@@ -2,7 +2,7 @@
 Project for extracting the critical point programming
 
 # Run-time environment
-Visual Studio and CUDA8.0 are installed on a computer with the NVDIA graphics card which the compute capability is 2.1 or above
+Visual Studio and CUDA8.0 are installed on a computer with the NVDIA graphics card which the compute capability is 2.1 or above (The Visual Studio 2013 is used here)
 
 #test data
 DEM_2980_3515.img
