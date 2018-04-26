@@ -10,9 +10,7 @@ DEM_2980_3515.img
 #detail procedure of the parallel project
 1)Download all of the files except the ReadMe.txt from the website 
   (https://github.com/parallelProject/CriticalPointExtraction)
-  (Tip: the gdal.lib in the "lib" folder of the "include" folder is larger than 50M, it is maybe 
-  wrong in the downloaded CriticalPointExtraction-master.Zip. If it is wrong, download in seperate
-  and replace the library file in the "lib" folder.)
+  (Tip: the gdal.lib in the "lib" folder of the "include" folder is larger than 50M, it must be downloaded in seperate.)
 2)Copy these files to the file directory of the project
 4)Add the four files(ComBase.cpp, ComBase.h, kernel.cu and main.cpp) into the project
 5)Configure the path of the library file and properties, Click the Project->Properties
