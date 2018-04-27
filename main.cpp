@@ -24,7 +24,7 @@ void GDALPointSelect(BSTR inName, double thresholdVal, BSTR outName)
 	CComBase comBase;
 	int imgWidth = 0, imgHeight = 0;
 
-	cout << "It has entered the PointSelect and will open the DEM image£¡" << endl;
+	cout << "It has entered the PointSelect and will open the DEM imageÂ£Â¡" << endl;
 	if (!comBase.OpenImg(inName, imgWidth, imgHeight))
 		return;
 	float *pBufferIn = new float[imgWidth*imgHeight];
@@ -78,11 +78,11 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 	double time;
 	cout << "It starts extracting the critical point!" << endl;
 	BSTR inName = L"D:\\CriticalPointExtraction-master\\DEM_2980_3515.img";			//It is the directory of the input DEM image
-	BSTR outName = L"D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_12.0.img";	//It is the directory of the output cirtical point
+	BSTR outName = L"D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_18.0.img";	//It is the directory of the output cirtical point
 	ofstream timeTxt;
-	timeTxt.open("D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_12.0.txt");		//The text is recording the computation time
+	timeTxt.open("D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_18.0.txt");		//The text is recording the computation time
 	begin = clock();
-	GDALPointSelect(inName, 12.0, outName);			//10.0 is the threshold value
+	GDALPointSelect(inName, 18.0, outName);			//18.0 is the threshold value
 	end = clock();
 	time = (double)(end - begin) / CLOCKS_PER_SEC;
 	timeTxt << "time:" << time << endl;
