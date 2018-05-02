@@ -1,5 +1,5 @@
-# CriticalPointExtraction
-Project for extracting the critical point programming
+# CriticalPointExtractionCUDA
+Project for accurately and rapidly extracting the critical point programming
 
 # Run-time environment
 Visual Studio and CUDA8.0 are installed on a computer with the NVDIA graphics card which the compute capability is 2.1 or above (The Visual Studio 2013 is used here)
@@ -9,7 +9,7 @@ DEM_2980_3515.img
 
 #detail procedure of the parallel project
 
-1)Downloading all of the files except the ReadMe.txt from the website (https://github.com/parallelProject/CriticalPointExtraction)(Tip:the gdal.lib file in the "lib" folder of the "include" folder is larger than 50M, it must be downloaded in seperate and replace the gdal.lib file in the *.ZIP file.)
+1)Downloading all of the files except the ReadMe.txt from the website (https://github.com/parallelProject/CriticalPointExtractionCUDA)(Tip:the gdal.lib file in the "lib" folder of the "include" folder is larger than 50M, it must be downloaded in seperate and replace the gdal.lib file in the *.ZIP file.)
  
 2)Setting the file directory of the variables "inName" and "outName" in the main.cpp and the pre-defined threshold value
   
@@ -17,9 +17,9 @@ DEM_2980_3515.img
 
 4)Running the VS developer command prompt
 
-5)Calling the 'nmake' to compile the program and generating the "criticalpointcuda.exe" in the "Debug" folder of your path
+5)Calling the 'nmake' to compile the program and generating the "criticalpointextractioncuda.exe" in the "Debug" folder of your path
 
-6)Running the "criticalpointcuda.exe" and prompting the loss of the gdal14.dll, TinDLL.dll and geos_c.dll, then copy the three files in the "bin" folder of the "include" folder to the “Debug” folder
+6)Running the "criticalpointextractioncuda.exe" and prompting the loss of the gdal14.dll, TinDLL.dll and geos_c.dll, then copy the three files in the "bin" folder of the "include" folder to the “Debug” folder
 
 7)Running again and finally obtaining the image of the critical point and a txt file recording the computing time
 
