@@ -24,7 +24,7 @@ void GDALPointSelect(BSTR inName, double thresholdVal, BSTR outName)
 	CComBase comBase;
 	int imgWidth = 0, imgHeight = 0;
 
-	cout << "It has entered the PointSelect and will open the DEM image£¡" << endl;
+	cout << "It has entered the PointSelect and will open the DEM image!" << endl;
 	if (!comBase.OpenImg(inName, imgWidth, imgHeight))
 		return;
 	float *pBufferIn = new float[imgWidth*imgHeight];
