@@ -77,10 +77,10 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 	clock_t begin, end;
 	double time;
 	cout << "It starts extracting the critical point!" << endl;
-	BSTR inName = L"D:\\CriticalPointExtraction-master\\DEM_2980_3515.img";			//It is the directory of the input DEM image
-	BSTR outName = L"D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_18.0.img";	//It is the directory of the output cirtical point
+	BSTR inName = L"D:\\CriticalPointExtractionCUDA-master\\DEM_2980_3515.img";			//It is the directory of the input DEM image
+	BSTR outName = L"D:\\CriticalPointExtractionCUDA-master\\DEM_2980_3515_CP_18.0.img";	//It is the directory of the output cirtical point
 	ofstream timeTxt;
-	timeTxt.open("D:\\CriticalPointExtraction-master\\DEM_2980_3515_CP_18.0.txt");		//The text is recording the computation time
+	timeTxt.open("D:\\CriticalPointExtractionCUDA-master\\DEM_2980_3515_CP_18.0.txt");		//The text is recording the computation time
 	begin = clock();
 	GDALPointSelect(inName, 18.0, outName);			//18.0 is the threshold value
 	end = clock();
