@@ -26,7 +26,7 @@ CUDALIBRARY_PATH=/LIBPATH:"$(CUDAInstallDir)\lib\win32"
 OUTDIR=.\Debug
 
 #Tell the compiler that the project is trying to generate an exe
-all:$(OUTDIR) $(OUTDIR)\criticalpointcuda.exe
+all:$(OUTDIR) $(OUTDIR)\criticalpointextractioncuda.exe
 
 #If the Debug folder is not exist,create it
 $(OUTDIR):
@@ -44,8 +44,8 @@ $(OUTDIR)\main.obj:main.cpp
 	$(CC) $(INCLUDES_PATH) $(CC_PROJ) /c /Istdafx.h /IComBase.h /ITinClass.h /Fo"$(OUTDIR)\\" main.cpp
 
 #link
-$(OUTDIR)\criticalpointcuda.exe:$(OUTDIR)\ComBase.obj $(OUTDIR)\kernel.cu.obj $(OUTDIR)\main.obj
-	link $(LIBRARYS_PATH) $(CUDALIBRARY_PATH) /out:$(OUTDIR)\criticalpointcuda.exe $(OUTDIR)\ComBase.obj $(OUTDIR)\kernel.cu.obj $(OUTDIR)\main.obj cudart.lib kernel32.lib\
+$(OUTDIR)\criticalpointextractioncuda.exe:$(OUTDIR)\ComBase.obj $(OUTDIR)\kernel.cu.obj $(OUTDIR)\main.obj
+	link $(LIBRARYS_PATH) $(CUDALIBRARY_PATH) /out:$(OUTDIR)\criticalpointextractioncuda.exe $(OUTDIR)\ComBase.obj $(OUTDIR)\kernel.cu.obj $(OUTDIR)\main.obj cudart.lib kernel32.lib\
 	user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib gdal_i.lib TinDLL.lib gdal.lib
 
 #clean
