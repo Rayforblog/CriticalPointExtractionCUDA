@@ -8,7 +8,7 @@ CXX=nvcc
 VSInstallDir=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC
 CUDAInstallDir=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0
 CUDASampleDir=C:\ProgramData\NVIDIA Corporation\CUDA Samples\v8.0
-DOWNLOADFILE_PATH=D:\CriticalPointExtraction-master
+DOWNLOADFILE_PATH=D:\CriticalPointExtractionCUDA-master
 
 #The environmental configuration
 CC_PROJ=/GS /analyze- /W3 /Zc:wchar_t /I"$(CUDAInstallDir)\include" /ZI /Gm /Od /fp:precise /D "WIN32" \
